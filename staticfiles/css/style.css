@@ -1,0 +1,117 @@
+.body {
+  position: absolute;
+  left: 150px;
+}
+
+.category {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 50px;
+  margin-bottom: 3px;
+  box-shadow: 5px 10px gainsboro;
+}
+
+.category-heading {
+  padding-top: 0;
+}
+
+#new-task {
+  border-radius: 5px;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.todoItem {
+  padding: 15px;
+  color: #777;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  background-color: ghostwhite;
+  margin-bottom: 2px;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  background: transparent;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  /* -webkit-transition: all 0.3s;
+  transition: all 0.3s;*/
+}
+
+.deleteTask {
+  transition: transform 0.2s;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 50px;
+}
+.deleteTask:hover {
+  transition: transform 0.2s;
+  width: 5px;
+  height: 5px;
+  transform: scale(1.5);
+}
+
+.editTask {
+  transition: transform 0.2s;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 80px;
+}
+
+.editTask:hover {
+  transition: transform 0.2s;
+  width: 5px;
+  height: 5px;
+  transform: scale(1.5);
+}
+
+[class*="category-"] {
+  display: inline-block;
+  font-size: 10px;
+  background: #444;
+  vertical-align: middle;
+  color: #fff;
+  padding: 10px;
+  width: 75px;
+  text-align: center;
+  border-radius: 5px;
+  /* float: right; */
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.category- {
+  background: transparent;
+}
+.category-Work {
+  background: #2980b9;
+}
+.category-Business {
+  background: #8e44ad;
+}
+.category-Personal {
+  background: #16a085;
+}
+
+.taskCheckBox {
+  background-color: ghostwhite;
+}
+
+.save-btn {
+  float: right;
+  padding-bottom: 5px;
+}
