@@ -29,16 +29,6 @@ def todosView(request):
     workTodo = todoitems.filter(category_id=9).count()
     othersTodo = todoitems.filter(category_id=10).count()
 
-    # context = {
-    #     "form": form,
-    #     "todoitems": todoitems,
-    #     "categories": categories,
-    #     "businessTodo": businessTodo,
-    #     "personalTodo": personalTodo,
-    #     "workTodo": workTodo,
-    #     "othersTodo": othersTodo
-
-    # }
 
     if request.method == "POST":
         form = TodoForm(request.POST)

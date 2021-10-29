@@ -110,3 +110,8 @@ button {
 .taskCheckBox {
   background-color: ghostwhite;
 }
+
+.save-btn {
+  float: right;
+  padding-bottom: 5px;
+}
