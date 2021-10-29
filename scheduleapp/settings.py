@@ -27,7 +27,7 @@ SECRET_KEY = 'xx^uf3rd4*rn9dpd%_!^#%7!*+k=0+p0@qnli9ctr$qoltwr7t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-scheduleapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['django-scheduleapp.herokuapp.com']
 
 
 # Application definition
