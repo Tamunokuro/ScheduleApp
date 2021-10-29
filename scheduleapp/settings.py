@@ -84,14 +84,14 @@ WSGI_APPLICATION = 'scheduleapp.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'django-scheduleapp-db',
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'tamunokuro',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432'
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django-scheduleapp-db',
+        'USER': 'postgres',
+        'PASSWORD': 'tamunokuro',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
