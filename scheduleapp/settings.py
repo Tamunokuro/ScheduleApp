@@ -81,11 +81,12 @@ WSGI_APPLICATION = 'scheduleapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'scheduleappdb',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django-scheduleapp-db',
+        'USER': 'postgres',
+        'PASSWORD': 'tamunokuro',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
