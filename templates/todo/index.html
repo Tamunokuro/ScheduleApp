@@ -1,0 +1,119 @@
+{% extends "todo/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- <form method="POST" autocomplete="off" action="{% url 'home' %}">
+    {% csrf_token %}
+    {{form|crispy}}
+    <div class="col-md" id="new-task">
+        <input type="submit" class="btn btn-primary btn-lg mt-3" value="Add Task" name="addTask">
+      </div>
+
+</form> -->
+
+<h6 class="text-muted mt-3">Add New Task</h6>
+    <form action="{% url 'home' %}" method="POST" autocomplete="off">
+    <div class="row g-2 pt-2">
+        <!-- <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputGrid" placeholder="New Task" name="task">
+            <label for="floatingInputGrid text-muted">Task</label>
+          </div>
+        </div> -->
+        <!-- <div class="col-md">
+            <div class="form-floating">
+                <input type="date" class="form-control" id="floatingInputGrid" placeholder="New Task" name="date">
+                <label for="floatingInputGrid text-muted">Date</label>
+              </div>
+        </div> -->
+        <!-- <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="category_selected">
+                <option class="disabled" value="">Select Category </option>
+                {% for category in categories %}
+                    <option class="" value="{{ category.name }}" name="{{ category.name }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+            <label for="floatingSelectGrid">Category</label>
+          </div>
+        </div> -->
+        {{form|crispy}}
+        {% csrf_token %}
+        <div class="new-task col-md" id="new-task">
+          <input type="submit" class="btn btn-primary btn-lg" value="Add Task" name="addTask">
+        </div>
+    </div>
+      </form>
+
+
+<div class="container">
+    <div class="col-md-10 offset-md-1 mt-5">
+    <div class="body mt-3">
+        <h3>What's Up Josh</h3>
+        <h6 class="text-muted mt-3">SCHEDULE CATEGORIES</h6>
+        <div class="row">
+            <div class="col">
+                <div class="category">
+                  <h5>Work</h5>
+                    <h6 class="text-muted text-center mt-3">{{workTodo}}</h6>
+                  
+                </div>
+            </div>
+            
+            <div class="col">
+              <div class="category">
+                <h5>Business</h5>
+                <h6 class="text-muted text-center mt-3">{{businessTodo}}</h6>
+                
+              </div>
+          </div>
+    
+          <div class="col">
+              <div class="category">
+                <h5>Personal</h5>
+                <h6 class=" text-muted text-center mt-3">{{personalTodo}}</h6>
+                
+              </div>
+          </div>
+
+          <div class="col">
+            <div class="category">
+              <h5>Others</h5>
+              <h6 class=" text-muted text-center mt-3">{{othersTodo}}</h6>
+            </div>
+        </div>
+        </div>
+  
+        <h6 class="text-muted mt-3">TASKS</h6>
+        <div class="row">
+          <div class="col-lg">
+            <ul class="todoList justify-content-center">
+              {% for todo in todoitems %}
+              <li class="todoItem">
+                
+                {{ todo.task }} - {{ todo.date }}
+                <br>
+               
+                <span class="category-{{ todo.category }}" name="{{ todo.category }}"> {{ todo.category }}</span>
+                
+                
+                
+                <a class="btn text-secondary py-0 editTask" href="{% url 'update' todo.id %}">
+                  <i class="fas fa-pen"></i>
+                </a>
+              
+                <form action="{% url 'delete' todo.id %}" method="POST" class="d-inline">
+                  {% csrf_token %}
+                  <button class="deleteTask" type="submit"><span><i class="fas fa-trash"></i></span></button>
+                </form>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        </div>
+</div>
+</div>
+{% endblock content %}
+
+
