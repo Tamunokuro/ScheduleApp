@@ -27,7 +27,7 @@ SECRET_KEY = 'xx^uf3rd4*rn9dpd%_!^#%7!*+k=0+p0@qnli9ctr$qoltwr7t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-scheduleapp.herokuapp.com']
+ALLOWED_HOSTS = ['django-scheduleapp.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -84,18 +84,18 @@ WSGI_APPLICATION = 'scheduleapp.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'django-scheduleapp-db',
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'tamunokuro',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432'
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'de1m8t4ihaunv8',
+        'USER': 'ywrevgjujswsuo',
+        'PASSWORD': '1d49f4af8515bb4a378d8bca37df7188eba81aaec7fc2227d350a63fb7b23910',
+        'HOST': 'ec2-3-227-181-85.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
