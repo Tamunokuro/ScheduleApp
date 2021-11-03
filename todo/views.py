@@ -24,11 +24,10 @@ def todosView(request):
     form = TodoForm()
     todoitems = Todo.objects.all().order_by("-id")
     categories = Category.objects.all()
-    businessTodo = todoitems.filter(category_id=7).count()
-    personalTodo = todoitems.filter(category_id=8).count()
-    workTodo = todoitems.filter(category_id=9).count()
-    othersTodo = todoitems.filter(category_id=10).count()
-
+    businessTodo = todoitems.filter(category_id=2).count()
+    personalTodo = todoitems.filter(category_id=3).count()
+    workTodo = todoitems.filter(category_id=1).count()
+    othersTodo = todoitems.filter(category_id=4).count()
 
     if request.method == "POST":
         form = TodoForm(request.POST)
