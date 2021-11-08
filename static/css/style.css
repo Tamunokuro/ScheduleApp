@@ -43,7 +43,7 @@ button {
   border: none;
   outline: none;
   height: 60px;
-  font-size: 14px;
+  font-size: 18px;
   color: gray;
   cursor: pointer;
   /* -webkit-transition: all 0.3s;
@@ -53,7 +53,7 @@ button {
 .deleteTask {
   transition: transform 0.2s;
   width: 10px;
-  height: 20px;
+  height: 10px;
   position: absolute;
   right: 50px;
 }
