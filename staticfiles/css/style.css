@@ -42,37 +42,35 @@ button {
   border-radius: 2px;
   border: none;
   outline: none;
-  height: 50px;
-  font-size: 14px;
+  height: 60px;
+  font-size: 18px;
   color: gray;
   cursor: pointer;
   /* -webkit-transition: all 0.3s;
   transition: all 0.3s;*/
 }
 
-.deleteTask {
+#deleteTask {
   transition: transform 0.2s;
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 50px;
 }
-.deleteTask:hover {
+#deleteTask:hover {
   transition: transform 0.2s;
   width: 5px;
   height: 5px;
   transform: scale(1.5);
 }
 
-.editTask {
+#editTask {
   transition: transform 0.2s;
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 80px;
 }
 
-.editTask:hover {
+#editTask:hover {
   transition: transform 0.2s;
   width: 5px;
   height: 5px;
