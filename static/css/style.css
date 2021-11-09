@@ -50,29 +50,27 @@ button {
   transition: all 0.3s;*/
 }
 
-.deleteTask {
+#deleteTask {
   transition: transform 0.2s;
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 50px;
 }
-.deleteTask:hover {
+#deleteTask:hover {
   transition: transform 0.2s;
   width: 5px;
   height: 5px;
   transform: scale(1.5);
 }
 
-.editTask {
+#editTask {
   transition: transform 0.2s;
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 80px;
 }
 
-.editTask:hover {
+#editTask:hover {
   transition: transform 0.2s;
   width: 5px;
   height: 5px;

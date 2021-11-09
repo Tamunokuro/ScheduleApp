@@ -47,15 +47,15 @@
 
 
 <div class="container">
-    <div class="col-md-10 offset-md-1 mt-5">
-    <div class="body mt-3">
-        <h3>What's Up Josh</h3>
+    <div class="col-md-10 mt-5">
+    <div class="mt-3">
+        <h3 class="text-muted">What's Up Josh</h3>
         <h6 class="text-muted mt-3">SCHEDULE CATEGORIES</h6>
         <div class="row">
             <div class="col">
                 <div class="category">
                   <h5>Work</h5>
-                    <h6 class="text-muted text-center mt-3">{{workTodo}}</h6>
+                    <h6 class="text-muted mt-3">{{workTodo}}</h6>
                   
                 </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="col">
               <div class="category">
                 <h5>Business</h5>
-                <h6 class="text-muted text-center mt-3">{{businessTodo}}</h6>
+                <h6 class="text-muted mt-3">{{businessTodo}}</h6>
                 
               </div>
           </div>
@@ -71,7 +71,7 @@
           <div class="col">
               <div class="category">
                 <h5>Personal</h5>
-                <h6 class=" text-muted text-center mt-3">{{personalTodo}}</h6>
+                <h6 class=" text-muted mt-3">{{personalTodo}}</h6>
                 
               </div>
           </div>
@@ -79,14 +79,18 @@
           <div class="col">
             <div class="category">
               <h5>Others</h5>
-              <h6 class=" text-muted text-center mt-3">{{othersTodo}}</h6>
+              <h6 class=" text-muted mt-3">{{othersTodo}}</h6>
             </div>
         </div>
         </div>
+    </div>
+    </div>
+</div>
   
+<div class="container">
         <h6 class="text-muted mt-3">TASKS</h6>
         <div class="row">
-          <div class="col-lg">
+          <div class="col">
             <ul class="todoList justify-content-center">
               {% for todo in todoitems %}
               <li class="todoItem">
@@ -94,26 +98,28 @@
                 {{ todo.task }} - {{ todo.date }}
                 <br>
                
-                <span class="category-{{ todo.category }}" name="{{ todo.category }}"> {{ todo.category }}</span>
+                <span class="category-{{ todo.category }}" name="{{ todo.category }}"> {{ todo.category }} 
                 
-                
-                
-                <a class="btn text-secondary py-0 editTask" href="{% url 'update' todo.id %}">
+                  
+                </span>
+                <a class="btn text-secondary" id="editTask" href="{% url 'update' todo.id %}">
                   <i class="fas fa-pen"></i>
                 </a>
-              
                 <form action="{% url 'delete' todo.id %}" method="POST" class="d-inline">
                   {% csrf_token %}
-                  
-                  <button class="deleteTask" type="submit"><i class="fa fa-rocket"></i></button>
+                  <button id="deleteTask" type="submit"><i class="fa fa-trash"></i></button>
                 </form>
+                
+                
+                
+               
+              
+                
               </li>
               {% endfor %}
             </ul>
           </div>
         </div>
-        </div>
-</div>
 </div>
 {% endblock content %}
 
