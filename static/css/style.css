@@ -35,7 +35,7 @@
   background-color: ghostwhite;
   margin-bottom: 2px;
 }
-
+/* 
 button {
   font-family: "Open Sans", sans-serif;
   background: transparent;
@@ -45,9 +45,24 @@ button {
   height: 60px;
   font-size: 18px;
   color: gray;
-  cursor: pointer;
-  /* -webkit-transition: all 0.3s;
+  cursor: pointer; */
+/* -webkit-transition: all 0.3s;
   transition: all 0.3s;*/
+/* } */
+
+#editTask {
+  transition: transform 0.2s;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  display: inline;
+}
+
+#editTask:hover {
+  transition: transform 0.2s;
+  width: 5px;
+  height: 5px;
+  transform: scale(1.5);
 }
 
 #deleteTask {
@@ -55,22 +70,9 @@ button {
   width: 10px;
   height: 10px;
   position: absolute;
+  display: inline;
 }
 #deleteTask:hover {
-  transition: transform 0.2s;
-  width: 5px;
-  height: 5px;
-  transform: scale(1.5);
-}
-
-#editTask {
-  transition: transform 0.2s;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-}
-
-#editTask:hover {
   transition: transform 0.2s;
   width: 5px;
   height: 5px;
